@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="../javascripts/bootstrap.min.css">
+    <script src="../javascripts/jquery.min.js"></script>
+    <script src="../javascripts/bootstrap.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #head_1 {
+            width: 100%;
+            height: 40px;
+            background-color: #5bc0de;
+        }
+
+        #head_1 li {
+            display: inline-block;
+            float: right;
+            margin-right: 20px;
+            margin-top: 10px;
+            color: white;
+        }
+
+        #head_1 li a {
+            color: white;
+            display: inline;
+        }
+
+        #head_ic {
+            margin-right: 5px;
+        }
+        #head_2{
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+        nav {
+            width: 100%;
+            height: 30px;
+        }
+        .container-fluid{
+            background-color: #00B7FF;
+        }
+
+
+        #na ul li a{
+            font-size: 17px;
+            color: white;
+        }
+        #na ul li a:hover{
+            color:black;
+        }
+        #f_search{
+            margin-left: 200px;
+        }
+        section {
+            width: 100%;
+            height: auto;
+        }
+
+        aside {
+            width: 30%;
+            height: auto;
+            float: left;
+            margin-top: 20px;
+        }
+        aside a {
+            font-size: 15px;
+            color: black;
+        }
+        aside a:hover{
+            font-size: 17px;
+            color: black;
+        }
+
+        article {
+            width: 68%;
+            height: auto;
+            float: right;
+            margin-top: 20px;
+        }
+        .carousel-inner{
+            width: 100%;
+            height: 400px;
+        }
+        footer{
+            margin-top: 10px;
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<header id="head_1">
+    <img src="../images/flag.png" width="35px" height="35px" style="float: left;margin-top: 3px;margin-left: 10px">
+    <li><a href="#"><img src="../images/login.png" width="24px" height="24px" id="head_ic">Đăng
+            Nhập</a></li>
+    <li><a href="#"><img src="../images/registry.png" width="24px" height="24px" id="head_ic">Đăng
+            Ký</a></li>
+</header>
+<header id="head_2">
+
+</header>
+<nav id="na">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Văn Bản Pháp Quy</a></li>
+                <li><a href="#">Thành Viên</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" id="f_search" action="/action_page.php">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Hãy nhập gì đó ... ">
+                </div>
+                <button type="submit" class="btn btn-danger">Tìm Kiếm</button>
+            </form>
+        </div>
+    </nav>
+</nav>
+<section>
+    <aside>
+            <div class="panel panel-default">
+                <div class="panel-body"><a href="#">Thiết bị thông minh</a></div>
+                <div class="panel-body"><a href="#">Thời trang cao cấp</a></div>
+                <div class="panel-body"><a href="#">Điện lạnh, máy gia dụng</a></div>
+                <div class="panel-body"><a href="#">Máy tính, laptop</a></div>
+            </div>
+    </aside>
+    <article>
+        <div id="myslider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myslider" data-slide-to="0" class="active"></li>
+            <li data-target="#myslider" data-slide-to="1"></li>
+            <li data-target="#myslider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/a.jpg" width="100%">
+            </div>
+            <div class="item">
+                <img src="images/b.jpg" width="100%">
+            </div>
+            <div class="item">
+                <img src="images/c.png" width="100%">
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myslider" role="button"
+           data-slide="prev"> <i class="fa fa-chevron-left"
+                                 aria-hidden="true"></i>
+        </a> <a class="right carousel-control" href="#myslider" role="button"
+                data-slide="next"> <i class="fa fa-chevron-right"
+                                      aria-hidden="true"></i>
+        </a>
+        </div>
+    </article>
+</section>
+<footer>
+    <div class="container" id="foot">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img alt="" src="images/Logoa.png" class="img-circle" width="80px"
+                     height="80px">
+                <p>070-639-1667</p>
+                <p>ltsmobile@gmail.com</p>
+                <p>12, Nguyễn Văn Bảo, p4,Gò Vấp,Hồ Chí Minh</p>
+            </div>
+            <div class="col-md-4" id="ud">
+                <img alt="" src="images/icon/a30.png" width="30px" height="30px">
+                <img alt="" src="images/icon/b30.png" width="30px" height="30px">
+                <img alt="" src="images/icon/c30.png" width="30px" height="30px">
+                <img alt="" src="images/icon/d30.png" width="30px" height="30px">
+                <hr class="light">
+                <h5>Ours Hours</h5>
+                <hr class="light">
+                <p>Monday-Saturday: 8am - 10pm</p>
+                <p>Sunday: 8am - 4pm</p>
+            </div>
+            <div class="col-md-4">
+                <br />
+                <br />
+                <hr class="light">
+                <h5>Service</h5>
+                <hr class="light">
+                <p>12,Nguyễn Văn Đậu,Bình Thạnh,Hồ Chí Minh</p>
+                <p>22,Nguyễn Văn Nghi,Gò Vấp,Hồ Chí Minh</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
