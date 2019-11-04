@@ -6,14 +6,16 @@
     <script src="../javascripts/jquery.min.js"></script>
     <script src="../javascripts/bootstrap.min.js"></script>
     <style type="text/css">
-        *{
-            margin: 0px;
+        body{
+            margin: 0px auto;
             padding: 0px;
+            margin-left: 10px;
         }
         #head_1 {
             width: 100%;
-            height: 40px;
+            height: 55px;
             background-color: #5bc0de;
+            margin-left: 10px;
         }
 
         #head_1 li {
@@ -23,23 +25,21 @@
             margin-top: 10px;
             color: white;
         }
-
         #head_1 li a {
             color: white;
+            font-weight: bold;
             display: inline;
-        }
-
-        #head_ic {
-            margin-right: 5px;
         }
         #head_2{
             width: 100%;
             height: 100px;
+            margin-top: 50px;
             background-color: white;
         }
         nav {
             width: 100%;
             height: 30px;
+            margin-top: 45px;
         }
         .container-fluid{
             background-color: #00B7FF;
@@ -56,7 +56,7 @@
         #f_search{
             margin-left: 200px;
         }
-        section {
+        #section_1 {
             width: 100%;
             height: auto;
         }
@@ -86,26 +86,111 @@
             width: 100%;
             height: 400px;
         }
+        #section_2{
+            width: 100%;
+            margin-top: 5px;
+            height: auto;
+        }
+        .col-sm-4{
+            margin-top: 10px;
+            overflow: hidden;
+         }
+        .col-sm-4 img{
+            transition: transform .5s ease;
+        }
+        .col-sm-4:hover img{
+            margin-top: 10px;
+            transform: scale(1.5);
+        }
         footer{
             margin-top: 10px;
             width: 100%;
-            height: 300px;
-            background-color: black;
+            height: 200px;
+            background-color: #204d74;
             float: left;
         }
 
     </style>
 </head>
 <body>
-<header id="head_1">
-    <img src="../images/flag.png" width="35px" height="35px" style="float: left;margin-top: 3px;margin-left: 10px">
-    <li><a href="#"><img src="../images/login.png" width="24px" height="24px" id="head_ic">Đăng
+<header id="head_1" class="navbar-fixed-top">
+    <marquee width="70%"><p style="font-size: 17px;color: white;margin-top: 12px;font-family:'Comic Sans MS'">LTS Aution Mang Đến Sự An Tâm Tuyệt Đối</p></marquee>
+    <img src="../images/flag.png" width="35px" height="35px" style="float: left;margin-top: 7px;margin-left: 10px">
+    <li style="margin-top: 15px;"><a href="#" data-toggle="modal" data-target="#Modal_DN"><img src="../images/lock.png" width="20px" height="20px">&nbsp;Đăng
             Nhập</a></li>
-    <li><a href="#"><img src="../images/registry.png" width="24px" height="24px" id="head_ic">Đăng
+    <li style="margin-top: 15px;"><a href="#" data-toggle="modal" data-target="#Modal_DK"><img src="../images/star.png" width="20px" height="20px">&nbsp;Đăng
             Ký</a></li>
+    <li><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal_DN">Đăng Bài</button></li>
+    <div class="modal fade" id="Modal_DN" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="background-color: #f8f8f8">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color: gray">Đăng Nhập</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="ten">Tên Đăng Nhập</label>
+                            <input type="text" class="form-control" id="ten">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Mật Khẩu</label>
+                            <input type="password" class="form-control" id="pwd">
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Nhớ mật khẩu</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%" >Đăng Nhập</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="Modal_DK" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="background-color: #f8f8f8">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color: gray">Đăng Ký Tài Khoản Mới</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="ten">Tên Đăng Nhập</label>
+                            <input type="text" class="form-control" id="ten" placeholder="Nhập tên truy cập">
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Email</label>
+                            <input type="email" class="form-control" id="mail" placeholder="Nhập mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Mật Khẩu</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Nhập vào mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <label for="re_pwd">Xác Nhận Mật Khẩu</label>
+                            <input type="password" class="form-control" id="re_pwd" placeholder="Nhập lại mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <label for="diachi">Địa Chỉ</label>
+                            <input type="text" class="form-control" id="diachi" placeholder="Nhập vào địa chỉ">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </header>
 <header id="head_2">
-
+    <img src="../images/logo.png" width="100%" height="150px">
 </header>
 <nav id="na">
     <nav class="navbar navbar-inverse">
@@ -127,7 +212,7 @@
         </div>
     </nav>
 </nav>
-<section>
+<section id="section_1">
     <aside>
             <div class="panel panel-default">
                 <div class="panel-body"><a href="#">Thiết bị thông minh</a></div>
@@ -164,39 +249,37 @@
         </div>
     </article>
 </section>
-<footer>
-    <div class="container" id="foot">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img alt="" src="images/Logoa.png" class="img-circle" width="80px"
-                     height="80px">
-                <p>070-639-1667</p>
-                <p>ltsmobile@gmail.com</p>
-                <p>12, Nguyễn Văn Bảo, p4,Gò Vấp,Hồ Chí Minh</p>
-            </div>
-            <div class="col-md-4" id="ud">
-                <img alt="" src="images/icon/a30.png" width="30px" height="30px">
-                <img alt="" src="images/icon/b30.png" width="30px" height="30px">
-                <img alt="" src="images/icon/c30.png" width="30px" height="30px">
-                <img alt="" src="images/icon/d30.png" width="30px" height="30px">
-                <hr class="light">
-                <h5>Ours Hours</h5>
-                <hr class="light">
-                <p>Monday-Saturday: 8am - 10pm</p>
-                <p>Sunday: 8am - 4pm</p>
-            </div>
-            <div class="col-md-4">
-                <br />
-                <br />
-                <hr class="light">
-                <h5>Service</h5>
-                <hr class="light">
-                <p>12,Nguyễn Văn Đậu,Bình Thạnh,Hồ Chí Minh</p>
-                <p>22,Nguyễn Văn Nghi,Gò Vấp,Hồ Chí Minh</p>
-            </div>
+<section id="section_2">
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="../images/a.jpg" width="100%" class="img-rounded">
+        </div>
+        <div class="col-sm-4">
+            <img src="../images/b.jpg" width="100%" class="img-rounded">
+        </div>
+        <div class="col-sm-4">
+            <img src="../images/c.png" width="100%" class="img-rounded">
         </div>
     </div>
-
+</section>
+<footer>
+    <div class="container" style="border-bottom: 2px solid white">
+            <div class="col-md-4">
+                <p style="font-size: 15px;color: white;margin-top: 10px"><img src="../images/hear.png" width="20px" height="20px"> &emsp; Địa chỉ: 15 Nguyễn Văn Bảo p5 Gò Vấp</p>
+                <p style="font-size: 15px;color: white;margin-top: 10px"><img src="../images/call.png" width="20px" height="20px"> &emsp; Điện thoại: 098457474</p>
+                <p style="font-size: 15px;color: white;margin-top: 10px"><img src="../images/mail.png" width="20px" height="20px"> &emsp; Mail: ltsaution@gmail.com</p>
+                <p style="font-size: 15px;color: white;margin-top: 10px"><img src="../images/time.png" width="20px" height="20px"> &emsp; Thời Gian : 8:00 đến 21:00 từ thứ 2 đến thứ 7</p>
+            </div>
+            <div class="col-md-4">
+                <h3 style="color: white">Liên Kết Nhanh</h3>
+                <a href="#" style="font-size: 15px;color: white;margin-top: 10px"><img src="../images/arrow.png" width="20px" height="20px">&nbsp;Giới Thiệu</a> <br />
+                <a href="#" style="font-size: 15px;color: white;margin-top: 10px"><img src="../images/arrow.png" width="20px" height="20px">&nbsp;Dịch Vụ</a> <br />
+                <a href="#" style="font-size: 15px;color: white;margin-top: 10px"><img src="../images/arrow.png" width="20px" height="20px">&nbsp;Tin Tức</a>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    <h6 style="color: #8a6d3b;text-align: center">2019. Sàn đấu giá trực tuyến thuộc Sở Công thương Thành phố Hồ Chí Minh</h6>
 </footer>
 </body>
 </html>
