@@ -50,11 +50,9 @@
 </head>
 <section id="section_2">
     <div class="row">
-        <div class="col-sm-3">
-        </div>
         <% data.forEach(function (item){ %>
         <div class="col-sm-3">
-            <a href="/Detail"><img src="/images/a.jpg" width="100%" height="150px" class="img-rounded"></a>
+            <a href="/Detail"><img src="<%=item.url%>" width="100%" height="150px" class="img-rounded"></a>
             <span class="coutdown"></span><span class="gia"></span><span><%=item.tensanpham%></span>
         </div>
         <% }) %>
